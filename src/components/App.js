@@ -38,16 +38,16 @@ function App() {
   function handleCategories(e){
     e.target.className = "selected";
     let value = e.target.value;
-    let filteredItems;
+    // let filteredItems;
     setCatBtn(value);
     if(value==="All"){
-      setItems(items)
+      setItems(TASKS)
     }else{
-      filteredItems = items.filter(item=>item.category===value);
+      const filteredItems = items.filter(item=>item.category===value);
       setItems(filteredItems);
     }
     
-    setCatBtn("");
+    //setCatBtn("");
   }
 
   return (
